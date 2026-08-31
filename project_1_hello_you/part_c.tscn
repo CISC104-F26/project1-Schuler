@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c2lgg2dly1ay"]
+
+[node name="Part_C" type="Control" unique_id=1842323565]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1083034028]
+layout_mode = 0
+offset_right = 1159.0
+offset_bottom = 650.0
+theme_override_font_sizes/normal_font_size = 20
+text = "Add more labels, images, and other Control nodes to this scene to build your personal poster for Part C.
+
+Remember that you may need to scroll down to \"Theme Overrides > Font Sizes\" in the Inspector 
+to make your labels big enough to read. (This is font size 20px, for reference)."
+vertical_alignment = 1
