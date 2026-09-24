@@ -1,3 +1,76 @@
 [gd_scene format=3 uid="uid://jtxq5ribap12"]
 
-[node name="Part_B" type="Node3D" unique_id=970916361]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ytgv"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_huecx"]
+material = SubResource("StandardMaterial3D_4ytgv")
+top_radius = 0.03515625
+bottom_radius = 0.03515625
+height = 0.27770996
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mbgly"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_huecx"]
+material = SubResource("StandardMaterial3D_mbgly")
+radius = 0.21435547
+height = 0.9226074
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ndq3j"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_huecx"]
+material = SubResource("StandardMaterial3D_ndq3j")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_amdhh"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_huecx"]
+material = SubResource("StandardMaterial3D_amdhh")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g6rck"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_5yimm"]
+material = SubResource("StandardMaterial3D_g6rck")
+radius = 0.028808594
+height = 0.4152832
+
+[node name="Sookie" type="Node3D" unique_id=970916361]
+
+[node name="back leg left" type="MeshInstance3D" parent="." unique_id=1002695110]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28782308, 0.17716582, -0.8184237)
+mesh = SubResource("CylinderMesh_huecx")
+
+[node name="front leg right" type="MeshInstance3D" parent="." unique_id=48932898]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8568162, 0.17325209, -1.0443265)
+mesh = SubResource("CylinderMesh_huecx")
+
+[node name="back leg right" type="MeshInstance3D" parent="." unique_id=249637968]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.29648912, 0.19338575, -1.0536548)
+mesh = SubResource("CylinderMesh_huecx")
+
+[node name="front leg left" type="MeshInstance3D" parent="." unique_id=1470462883]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.86368465, 0.18418182, -0.83974296)
+mesh = SubResource("CylinderMesh_huecx")
+
+[node name="body" type="MeshInstance3D" parent="." unique_id=871938719]
+transform = Transform3D(0.03162977, -0.9977394, -0.05929361, 0.99949616, 0.031731457, -0.0007739682, 0.0026536686, -0.059239253, 0.9982403, -0.53800905, 0.4157901, -0.9470379)
+mesh = SubResource("CapsuleMesh_huecx")
+
+[node name="head" type="MeshInstance3D" parent="." unique_id=1809396708]
+transform = Transform3D(0.3360443, 0, 0, 0, 0.3360443, 0, 0, 0, 0.3360443, -0.96696645, 0.6555001, -0.98324335)
+mesh = SubResource("SphereMesh_huecx")
+
+[node name="ear2" type="MeshInstance3D" parent="." unique_id=1243022783]
+transform = Transform3D(-0.0016261995, 0.0045175035, 0.077655524, -0.03988567, 0.066636056, -0.0047117085, -0.066782646, -0.03990815, 0.00092308066, -0.97796166, 0.80694824, -1.1091218)
+mesh = SubResource("PrismMesh_huecx")
+
+[node name="ear 1" type="MeshInstance3D" parent="." unique_id=1899763837]
+transform = Transform3D(0.0023317744, 0, 0.07596118, 0.042170066, 0.06321035, -0.0012944912, -0.06318059, 0.04218993, 0.0019394497, -0.98362875, 0.80499995, -0.8540134)
+mesh = SubResource("PrismMesh_huecx")
+
+[node name="tail" type="MeshInstance3D" parent="." unique_id=870581075]
+transform = Transform3D(1.2832098, -0.30688095, 0.0014251944, 0.34714022, 1.1272641, -0.07277974, 0.02651254, 0.093306966, 0.883957, -0.06712295, 0.24212062, -0.946968)
+mesh = SubResource("CapsuleMesh_5yimm")

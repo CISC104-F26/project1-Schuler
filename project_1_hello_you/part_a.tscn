@@ -1,3 +1,143 @@
 [gd_scene format=3 uid="uid://cd2yhtj4c7iyw"]
 
+[ext_resource type="PackedScene" uid="uid://jtxq5ribap12" path="res://part_b.tscn" id="1_ys316"]
+[ext_resource type="PackedScene" uid="uid://c2lgg2dly1ay" path="res://part_c.tscn" id="2_to4tk"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_to4tk"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_0jsbj"]
+sky_material = SubResource("ProceduralSkyMaterial_to4tk")
+
+[sub_resource type="Environment" id="Environment_q6bo7"]
+background_mode = 2
+sky = SubResource("Sky_0jsbj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5yimm"]
+albedo_color = Color(0.15658343, 0.09942528, 0.0018516261, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_huecx"]
+material = SubResource("StandardMaterial3D_5yimm")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g6rck"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_huecx"]
+material = SubResource("StandardMaterial3D_g6rck")
+size = Vector3(0.07285309, 0.42285156, 0.07324219)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mbgly"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_12tun"]
+material = SubResource("StandardMaterial3D_mbgly")
+size = Vector3(0.8911133, 0.09472656, 0.59680176)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_amdhh"]
+albedo_color = Color(0.58260995, 1, 0.55153704, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5yimm"]
+material = SubResource("StandardMaterial3D_amdhh")
+size = Vector3(0.45324707, 0.028198242, 0.10559082)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y4lth"]
+albedo_color = Color(0.52906674, 0.5290667, 0.5290667, 1)
+metallic = 1.0
+metallic_specular = 1.0
+metallic_texture_channel = 4
+
+[sub_resource type="BoxMesh" id="BoxMesh_4ytgv"]
+material = SubResource("StandardMaterial3D_y4lth")
+size = Vector3(0.62158203, 0.3479004, 0.115057126)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ndq3j"]
+albedo_color = Color(0.11100849, 0.017527848, 0.32201824, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_huecx"]
+material = SubResource("StandardMaterial3D_ndq3j")
+radius = 0.038085938
+height = 0.14942932
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6xma7"]
+albedo_color = Color(1.5341676e-07, 0, 0.17081818, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_12tun"]
+material = SubResource("StandardMaterial3D_6xma7")
+top_radius = 0.14550781
+bottom_radius = 0.14550781
+height = 0.35736084
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ytgv"]
+albedo_color = Color(1, 0.75686276, 0.52156866, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_huecx"]
+material = SubResource("StandardMaterial3D_4ytgv")
+top_radius = 0.17138672
+bottom_radius = 0.17138672
+height = 0.09390259
+
 [node name="Part_A" type="Node3D" unique_id=2060501816]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1178300738]
+environment = SubResource("Environment_q6bo7")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=226170865]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=397108631]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.63332903, 0, 0)
+mesh = SubResource("PlaneMesh_huecx")
+
+[node name="desk leg 4" type="MeshInstance3D" parent="." unique_id=1448693838]
+transform = Transform3D(0.9995079, -0.03110236, 0.004163752, 0.030752294, 0.9972621, 0.06724657, -0.006243879, -0.067085445, 0.9977275, -0.27503127, 0.20617217, -0.6484351)
+mesh = SubResource("BoxMesh_huecx")
+
+[node name="desk leg 3" type="MeshInstance3D" parent="." unique_id=1487572748]
+transform = Transform3D(0.99929875, 0.037311822, 0.0031338497, -0.037396125, 0.998736, 0.033584177, -0.0018768011, -0.033677824, 0.9994309, -0.9193955, 0.20892034, -0.5895544)
+mesh = SubResource("BoxMesh_huecx")
+
+[node name="desk leg 2" type="MeshInstance3D" parent="." unique_id=1177993142]
+transform = Transform3D(0.99898577, -0.04503264, 0.00035849976, 0.044994943, 0.9984179, 0.033728175, -0.0018768, -0.03367782, 0.99943066, -0.2785532, 0.2173599, -0.8672237)
+mesh = SubResource("BoxMesh_huecx")
+
+[node name="desk leg 1" type="MeshInstance3D" parent="." unique_id=1262987816]
+transform = Transform3D(0.99988365, 0.0152275525, 0.0008827171, -0.015240278, 0.9997419, 0.01684723, -0.0006259471, -0.016858727, 0.99985766, -0.9111854, 0.20989725, -0.9263473)
+mesh = SubResource("BoxMesh_huecx")
+
+[node name="desktop" type="MeshInstance3D" parent="." unique_id=541775523]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.61882144, 0.42350668, -0.69560015)
+mesh = SubResource("BoxMesh_12tun")
+
+[node name="keyboard" type="MeshInstance3D" parent="." unique_id=1766560130]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.641755, 0.4906066, -0.48593056)
+mesh = SubResource("BoxMesh_5yimm")
+
+[node name="monitor" type="MeshInstance3D" parent="." unique_id=938546489]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.61901, 0.64197576, -0.7796278)
+mesh = SubResource("BoxMesh_4ytgv")
+
+[node name="mouse" type="MeshInstance3D" parent="." unique_id=437717393]
+transform = Transform3D(1, 0, 0, 0, 0.091088414, 0.9958428, 0, -0.9958428, 0.091088414, -0.31114945, 0.48428655, -0.49955416)
+mesh = SubResource("CapsuleMesh_huecx")
+
+[node name="chair" type="MeshInstance3D" parent="." unique_id=2087842083]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.601928, 0.21180904, -0.23403466)
+mesh = SubResource("CylinderMesh_12tun")
+
+[node name="cat bed" type="MeshInstance3D" parent="." unique_id=1377657295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1611296, 0.04045531, 0.8243039)
+mesh = SubResource("CylinderMesh_huecx")
+
+[node name="sookie" parent="." unique_id=970916361 instance=ExtResource("1_ys316")]
+transform = Transform3D(0.08767391, 0, -0.26354048, 0, 0.27774143, 0, 0.26354048, 0, 0.08767391, -0.31473637, 0.009416461, 0.93941665)
+
+[node name="Part_C" parent="." unique_id=1842323565 instance=ExtResource("2_to4tk")]
+offset_left = 376.0
+offset_top = -46.0
+offset_right = 506.0
+offset_bottom = -607.0
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1632249176]
+transform = Transform3D(0.6581237, 0.062001746, -0.75035256, -0.040883478, 0.998076, 0.04661285, 0.751799, 0, 0.65939236, -1.6659654, 0.9852003, 1.2504218)

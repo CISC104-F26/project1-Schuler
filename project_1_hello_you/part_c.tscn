@@ -1,20 +1,39 @@
 [gd_scene format=3 uid="uid://c2lgg2dly1ay"]
 
+[ext_resource type="Texture2D" uid="uid://c472r0jgvubgt" path="res://sookie.jpg" id="1_e15qq"]
+
 [node name="Part_C" type="Control" unique_id=1842323565]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 21.0
+offset_top = -31.0
+offset_right = 21.0
+offset_bottom = -554.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1083034028]
+[node name="Name2" type="Label" parent="." unique_id=1509105195]
 layout_mode = 0
-offset_right = 1159.0
-offset_bottom = 650.0
-theme_override_font_sizes/normal_font_size = 20
-text = "Add more labels, images, and other Control nodes to this scene to build your personal poster for Part C.
+offset_left = 160.0
+offset_top = 58.0
+offset_right = 360.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 30
+text = "Becca Schuler"
 
-Remember that you may need to scroll down to \"Theme Overrides > Font Sizes\" in the Inspector 
-to make your labels big enough to read. (This is font size 20px, for reference)."
+[node name="fun fact" type="RichTextLabel" parent="." unique_id=1083034028]
+layout_mode = 0
+offset_left = -140.0
+offset_top = 98.0
+offset_right = 1019.0
+offset_bottom = 152.0
+theme_override_font_sizes/normal_font_size = 20
+text = "Fun fact: my cat Sookie has lost rounds in video games for me by stepping on my keyboard"
 vertical_alignment = 1
+
+[node name="Sookie" type="Sprite2D" parent="." unique_id=251937305]
+position = Vector2(304.37503, 274.5625)
+scale = Vector2(0.20891203, 0.17433982)
+texture = ExtResource("1_e15qq")
